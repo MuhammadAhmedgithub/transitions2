@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-[100vh] w-full bg-blue-400">
+    
+    <div class="rounded-full  flex-col justify-center items-center text-center  bg-yellow-600 h-24 w-24 border-dotted border-2 border-red-600 ">
+        <div class="text-lg text-white mt-3" id="xCoord">X</div>
+        <div class="text-lg text-white mt-3" id="yCoord">Y</div>
+    </div>
+    
+
+    <script>
+        document.addEventListener("mousemove", handleMouse);
+        var divTag = document.getElementsByTagName('div');
+        var xCoord = document.getElementById('xCoord');
+        var yCoord = document.getElementById('yCoord');
+
+        function handleMouse(event) {
+            xCoord.innerHTML = `X : ${event.clientX}`;
+            yCoord.innerHTML = `Y : ${event.clientY}`;
+            
+            // Moving the div according to the mouse position
+            divTag[0].style.position = 'absolute';
+            divTag[0].style.top = `${event.clientY - 45}px`;
+            divTag[0].style.left = `${event.clientX - 45}px`;
+        }
+    </script>
+</body>
+</html>

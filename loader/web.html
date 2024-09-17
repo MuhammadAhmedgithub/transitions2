@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Loader Section -->
+    <div class="justify-center flex items-center h-[100vh] loader">
+        <img src="https://cdn.dribbble.com/users/527354/screenshots/3971059/loader.gif" alt="Loading...">
+    </div>
+
+    <!-- Main Page Section -->
+    <div name="mainPage" class="hidden flex-col items-center gap-24">
+        <h1 class="text-5xl font-bold justify-center text-center mt-4">Welcome to my Dashboard</h1>
+        <iframe src="https://leafurban.netlify.app/" class="w-[100vw] h-[80vh] mt-24" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        setTimeout(handleLoader, 3000);
+
+        function handleLoader() {
+            // Hide the loader
+            document.querySelector('.loader').style.display = 'none';
+
+        
+            const mainPage = document.getElementsByName('mainPage')[0];
+            mainPage.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+

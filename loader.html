@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="justify-center items-center flex h-[100vh]">
+        <img src="https://cdn.dribbble.com/users/33658/screenshots/5493249/loading.gif" alt="">
+        <h1 class="text-5xl font-bold hidden ">Welcome to my Dashboard</h1>
+    </div>
+    
+    <script>
+        setTimeout(handleLoader,3000)
+        function handleLoader() {
+            document.getElementsByTagName('img')[0].style.display='none'
+            document.getElementsByTagName('h1')[0].style.display='flex'
+
+        }
+    </script>
+</body>
+</html>
